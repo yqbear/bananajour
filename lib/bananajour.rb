@@ -8,9 +8,15 @@ require 'md5'
 
 require 'bananajour/gem_dependencies'
 
-Bananajour.require_gem 'rainbow'
-Bananajour.require_gem 'dnssd'
-Bananajour.require_gem 'fancypath'
+Bananajour.require_gem('rainbow')
+Bananajour.require_gem('net-mdns', 'net/dns/mdns-sd')
+Bananajour.require_gem('fancypath')
+
+# For now set up net-mdns to look like dnssd
+DNSSD = Net::DNS::MDNSSD
+module DNSSD
+  TextRecord = Hash
+end
 
 require 'bananajour/repository'
 require 'bananajour/grit_extensions'

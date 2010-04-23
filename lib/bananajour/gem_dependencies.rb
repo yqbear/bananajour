@@ -9,7 +9,7 @@ module Bananajour
       %w( fancypath            0.5.13 ),
       %w( rainbow              1.0.1 ),
       %w( grit                 1.1.1 ),
-      %w( dnssd                1.3.1 ),
+      %w( net-mdns             0.4   ),
       %w( haml                 2.0.9 ),
       %w( activesupport        2.3.2 ),
       %w( thin                 1.0.0 )
