@@ -18,7 +18,7 @@ gem = Gem::Specification.new do |gem|
   gem.has_rdoc         = false
   gem.bindir           = 'bin'
   gem.executables      = [ 'bananajour' ]
-  Bananajour::GemDependencies.all.each {|dep| gem.add_runtime_dependency( dep.name, dep.version ) }
+  Bananajour::GemDependencies.all.each {|dep| gem.add_runtime_dependency( dep.name, ">= #{dep.version}" ) }
 end
 
 task :clean do

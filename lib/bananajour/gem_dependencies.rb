@@ -15,7 +15,7 @@ module Bananajour
       %w( thin                 1.0.0 )
     ]
     class Dependency < Struct.new(:name, :version)
-      def require_gem; gem name, version end
+      def require_gem; gem(name, ">= #{version}") end
     end
     def self.all
       DEPENDENCIES.map {|(name, version)| Dependency.new(name, version)}
